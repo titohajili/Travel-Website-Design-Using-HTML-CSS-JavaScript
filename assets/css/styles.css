@@ -357,3 +357,53 @@ img {
 .about__image:hover .about__img{
   transform: scale(1.2);
 }
+
+/*========== POPULAR ==========*/
+.popular__container{
+  padding-top: 1.5rem;
+  grid-template-columns: 240px;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+
+.popular__image{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.popular__img{
+  transition: transform .4s;
+}
+
+.popular__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg,
+              hsla(0, 0%, 0%, 0)50%,
+              hsl(0, 0%, 0%)125%);
+}
+
+.popular__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.popular__location{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.popular__location i{
+  font-size: 1rem;
+}
+
+.popular__image:hover .popular__img{
+  transform: scale(1.2);
+}
