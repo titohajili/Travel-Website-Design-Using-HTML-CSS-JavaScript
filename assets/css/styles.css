@@ -284,7 +284,7 @@ img {
 }
 
 .button{
-  background-color: hsla(0, 0%, 0%, .2);
+  background-color: hsla(0, 0%, 100%, .2);
   padding: 1.25rem 1.5rem;
   color: var(--title-color);
   display: inline-flex;
@@ -460,5 +460,58 @@ img {
 .explore__name{
   font-size: var(--small-font-size);
   color: var(--title-color);
+}
+/*========== JOIN ==========*/
+.join__container{
+  row-gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.join__data{
+  text-align: center;
+
+}
+
+.join__description{
+  margin-bottom: 2rem;
+}
+
+.join__form{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.join__input{
+  padding: 1.25rem 1rem;
+  background-color: var(--container-color);
+}
+.join__button{
+  cursor: pointer;
+}
+
+.join__image{
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.join__img{
+  width: 300px;
+  transition: transform .4s;
+}
+
+.join__shadow{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+               hsla(0, 0%, 0%, 0) 50%,
+                hsl(0, 0%, 0%)125%);
+}
+
+.join__image:hover .join__img{
+  transform: scale(1.2);
 }
 
