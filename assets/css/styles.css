@@ -176,9 +176,21 @@ img {
 }
 
 .nav__link{
+  position: relative;
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
+}
+
+.nav__link::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: width .3s;
 }
 
 .nav__close{
@@ -589,4 +601,49 @@ img {
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
   text-align: center;
+}
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 10%);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: hsl(0, 0%, 20%);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(0, 0%, 30%);
+}
+
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: hsla(0, 0%, 100%, .1);
+  padding: 6px;
+  display: inline-flex;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
+
+.scrollup:hover{
+  transform: translateY(-.25rem);
+}
+
+.show-scroll{
+  bottom: 3rem;
+}
+
+.active-link::after{
+  width: 70%;
+} 
+
+.nav__link:hover::after{
+  width: 70%;
 }
